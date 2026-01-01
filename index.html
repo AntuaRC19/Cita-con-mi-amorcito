@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Una invitación para Carolina 💖</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+            text-align: center;
+            padding: 40px;
+            color: #333;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            max-width: 420px;
+            margin: auto;
+            border-radius: 25px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+            animation: fadeIn 1.5s ease;
+        }
+
+        h1 {
+            color: #e91e63;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .buttons {
+            margin-top: 25px;
+        }
+
+        button {
+            background: #e91e63;
+            color: white;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        button:hover {
+            background: #d81b60;
+            transform: scale(1.05);
+        }
+
+        .music {
+            margin-top: 25px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .heart {
+            font-size: 24px;
+            color: #e91e63;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Carolina 💖</h1>
+
+        <p>
+            Desde hace rato tengo ganas de preguntarte algo…
+        </p>
+
+        <p>
+            ¿Te gustaría acompañarme a tomar un cafecito ☕  
+            y compartir un momento bonito, tranquilo  
+            y solo para nosotros dos?
+        </p>
+
+        <p>
+            Prometo sonrisas, buena plática  
+            y mirarte como si el tiempo se detuviera y derritirme✨
+        </p>
+
+        <p class="heart">♥ ♥ ♥</p>
+
+        <div class="buttons">
+            <button onclick="alert('💖 Entonces es una cita, Carolina ☕✨')">
+                Sí 💕
+            </button>
+
+            <button onclick="alert('😍 Sabía que dirías que sí… cafecito asegurado ☕💖')">
+                Obvio que sí 😍
+            </button>
+        </div>
+
+        <div class="music">
+            <p>🎵 Morfina – Humbe</p>
+            <iframe 
+                width="100%" 
+                height="90"
+                src="https://www.youtube.com/embed/1P-5P-0wBjo?autoplay=0"
+                title="Morfina - Humbe"
+                frameborder="0"
+                allow="encrypted-media"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
