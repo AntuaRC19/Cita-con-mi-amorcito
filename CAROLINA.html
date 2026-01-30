@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Para Carolina 💌</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <h1 class="valentine">
+        Carolina, tengo una pequeña invitación para ti 💖
+    </h1>
+
+    <p id="countdown" style="text-align:center; font-size:18px;">
+        Esta sorpresa se revelará pronto…
+    </p>
+
+    <div class="envelope-wrapper">
+        <div id="envelope" class="close">
+            <div class="front flap"></div>
+            <div class="front pocket"></div>
+
+            <div class="letter">
+                <p class="words line1">Hola Carolina,</p>
+                <p class="words line2" id="mainText">
+                    Te he preparado algo especial para mañana.
+                </p>
+                <p class="words line3">
+                    7:00 pm ⏰
+                </p>
+                <p class="words line4">
+                    Con cariño 💕
+                </p>
+            </div>
+
+            <div class="hearts">
+                <div class="heart a1"></div>
+                <div class="heart a2"></div>
+                <div class="heart a3"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="reset">
+        <button id="open">Abrir</button>
+        <button id="reset">Cerrar</button>
+    </div>
+
+    <script src="./script.js"></script>
+
+    <script>
+        // Fecha objetivo: mañana a las 7:00 pm
+        const targetDate = new Date();
+        targetDate.setDate(targetDate.getDate() + 1);
+        targetDate.setHours(19, 0, 0, 0);
+
+        const countdownEl = document.getElementById("countdown");
+        const mainText = document.getElementById("mainText");
+
+        setInterval(() => {
+            const now = new Date();
+            const diff = targetDate - now;
+
+            if (diff <= 0) {
+                countdownEl.innerHTML = "💖 Ya es el momento…";
+                mainText.innerHTML = "¿Te gustaría ser mi novia? 💕";
+            } else {
+                const hours = Math.floor(diff / (1000 * 60 * 60));
+                const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+                countdownEl.innerHTML = 
+                    `Faltan ${hours} horas y ${minutes} minutos ✨`;
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
